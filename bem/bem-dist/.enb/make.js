@@ -27,7 +27,7 @@ module.exports = function (config) {
             // CSS
             // [require('enb/techs/css')]
             // SASS
-            [require('enb-sass')]
+            [require('enb-sass'), { target: '?.noprefix.css' }]
         ]);
 
         nodeConfig.addTargets([
@@ -41,14 +41,24 @@ module.exports = function (config) {
     config.nodes('*desktop.bundles/*', function (nodeConfig) {
         nodeConfig.addTechs([
             // essential
-            [enbBemTechs.levels, { levels: getDesktops(config) }]
+            [enbBemTechs.levels, { levels: getDesktops(config) }],
+            // autoprefixer
+            [require('enb-autoprefixer/techs/css-autoprefixer'), {
+                browserSupport: ['last 2 versions', 'ie 10', 'ff 24', 'opera 12'],
+                sourceTarget: '?.noprefix.css'
+            }]
         ]);
     });
 
     config.nodes('*touch-pad.bundles/*', function (nodeConfig) {
         nodeConfig.addTechs([
             // essential
-            [enbBemTechs.levels, { levels: getTouchPads(config) }]
+            [enbBemTechs.levels, { levels: getTouchPads(config) }],
+            // autoprefixer
+            [require('enb-autoprefixer/techs/css-autoprefixer'), {
+                browserSupport: ['android 4', 'ios 5'],
+                sourceTarget: '?.noprefix.css'
+            }]
         ]);
     });
 
