@@ -21,7 +21,8 @@ Based on [https://github.com/bem/generator-bem-stub](https://github.com/bem/gene
  * no minimazing.
 
 Difference:
-  * add SASS support.
+  * add SASS support via `enb-sass`,
+  * add ability to declare dependecies also in *.js files in `modules.require` section via enb-modules `deps-with-modules`.
 
 
 #### TODO
