@@ -1,5 +1,6 @@
 ({
-    shouldDeps: {
-        block: 'i-ga'
-    }
+    shouldDeps: [
+        { block: 'button' },
+        { block: 'i-ga' }
+    ]
 })

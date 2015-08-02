@@ -2,140 +2,141 @@
 <html>
 
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>BEM for all</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="bem/bem-dist/desktop.bundles/index/index.css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>BEM for all</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bem/bem-dist/desktop.bundles/index/index.css">
 </head>
 
 <body class="container">
+    <header>
+        <h1>Real estate</h1>
+        <h2>For real people</h2>
+    </header>
+    <main class="container__content">
+        <aside class="main-menu">
+            filters
+        </aside>
+        <div class="content">
 
-	<header>
-		<h1>Real estate</h1>
-		<h2>For real people</h2>
-	</header>
+            <div class="property property_type_advert i-bem" data-bem='{"property": { "phone": "8 (916) 978-12-32", "id": 1 }}'>
+                <div class="property__photo">
+                    <a class="property__photo-link" href="http://msk.idinaidi.ru/prodazha/podolsk/7588939" target="_blank">
+                        <img alt="г. Подольск, Октябрьский пр-кт, д. 21а" src="http://assets.idinaidi.ru/system/listing_image/image/47523977/big_e7ae21d99943.jpg?_=1418986462">
+                    </a>
+                    <div class="property__photo-count">12</div>
+                </div>
+                <div class="property__location">
+                    <div class="property__info-title">
+                        <a href="http://msk.idinaidi.ru/prodazha/podolsk/7588939" target="_blank">
+                            <strong>1-комнатная</strong> —
+                            <strong>34</strong> м<sup>2</sup> —
+                            <strong>5/10</strong> этаж</a>
+                    </div>
+                    <div class="property__info-address">Октябрьский пр-кт, д. 21а</div>
+                </div>
+                <div class="property__info">Продается однокомнатная квартира на 5 этаже 10-этажного дома в Подольке.&nbsp; Сан.узел раздельный, балкон застеклен, есть телефон. Новым...</div>
+                <div class="property__phone property__phone_hidden">Звоните: 8 (916) 978-**-**</div>
+                <div class="property__footer">
+                    <div class="property__info-update">обновлено: 30 июля</div>
+                    <div class="property__info-finance">
+                        <div class="property__info-finance-price">3 700 000
+                            <span class="rouble">Р</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="property__author">
+                    <a href="http://www.idinaidi.ru/companies/21127-aktsent-nedvizhimost">
+                        <div class="property__author-image is-company">
+                            <img alt="Thumb ef2e4474fd64" src="http://assets.idinaidi.ru/system/company/logo/21127/thumb_ef2e4474fd64.gif?_=1438339174">
+                        </div>
+                    </a>
+                </div>
 
-	<main class="container__content">
+                <button class="button property__hide i-bem" data-bem='{"button": ""}'>
+                	Скрыть объявление из выдачи
+                </button>
+            </div>
 
-		<aside class="main-menu">
-			filters
-		</aside>
+            <!-- { block: 'property', mods: { type: 'development' }} -->
+            <div class="property property_type_development i-bem" data-bem='{"property": { "phone": "8 (916) 981-12-32", "id": 2 }}'>
+                <div class="property__photo">
+                    <a class="property__photo-link" href="http://msk.idinaidi.ru/prodazha/moskva/11051358" target="_blank"><img alt="г. Москва, Северодвинская ул., д. 11, корп. 1" src="http://assets.idinaidi.ru/system/listing_image/image/76965832/big_9c851393107e.jpg?_=1433767018"></a>
+                    <div class="property__photo-count">21</div>
+                </div>
+                <div class="property__location">
+                    <div class="property__info-title"><a href="http://msk.idinaidi.ru/prodazha/moskva/11051358" target="_blank"><strong>2-комнатная</strong> — <strong>54</strong> м<sup>2</sup> — <strong>12/17</strong> этаж</a></div>
+                    <div class="property__info-address">Северодвинская ул., д. 11, корп. 1</div>
+                    <div class="property__info-metro">
+                        <div class="icon--walkman"></div><span> 15 минут</span><span> до </span>
+                        <div class="icon-wrapper icon--metro-station ">
+                            <svg class="icon-svg">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#metro-station-icon"></use>
+                            </svg>
+                        </div><span> Медведково </span></div>
+                </div>
+                <div class="property__info">ID1826. Продается аккуратная 2-комн. квартира в прекрасном зеленом районе на берегу реки Яузы, с видами на парк и набережную реки. В доме только...</div>
+                <div class="property__phone property__phone_hidden">Звоните: 8 (916) 981-**-**</div>
+                <div class="property__footer">
+                    <div class="property__info-update">обновлено: 29 июля</div>
+                    <div class="property__info-finance">
+                        <div class="property__info-finance-price">11 900 000 <span class="rouble">Р</span></div>
+                    </div>
+                </div>
+                <div class="property__author">
+                    <a href="http://www.idinaidi.ru/companies/338-dream-realty">
+                        <div class="property__author-image is-company"><img alt="Thumb 426605c37258" src="http://assets.idinaidi.ru/system/company/logo/338/thumb_426605c37258.jpg?_=1434548066"></div>
+                    </a>
+                </div>
 
-		<div class="content">
+                <button class="button property__hide i-bem" data-bem='{"button": ""}'>
+                	Скрыть объявление из выдачи
+                </button>
+            </div>
 
-			<div class="property property_type_advert i-bem" data-bem='{"property": { "phone": "8 (916) 978-12-32", "id": 1 }}'>
-				<div class="property__photo">
-					<a class="property__photo-link" href="http://msk.idinaidi.ru/prodazha/podolsk/7588939" target="_blank">
-						<img alt="г. Подольск, Октябрьский пр-кт, д. 21а" src="http://assets.idinaidi.ru/system/listing_image/image/47523977/big_e7ae21d99943.jpg?_=1418986462">
-					</a>
-					<div class="property__photo-count">12</div>
-				</div>
-				<div class="property__location">
-					<div class="property__info-title">
-						<a href="http://msk.idinaidi.ru/prodazha/podolsk/7588939" target="_blank">
-							<strong>1-комнатная</strong> —
-							<strong>34</strong> м<sup>2</sup> —
-							<strong>5/10</strong> этаж</a>
-					</div>
-					<div class="property__info-address">Октябрьский пр-кт, д. 21а</div>
-				</div>
-				<div class="property__info">Продается однокомнатная квартира на 5 этаже 10-этажного дома в Подольке.&nbsp; Сан.узел раздельный, балкон застеклен, есть телефон. Новым...</div>
-				<div class="property__phone property__phone_hidden">Звоните: 8 (916) 978-**-**</div>
-				<div class="property__footer">
-					<div class="property__info-update">обновлено: 30 июля</div>
-					<div class="property__info-finance">
-						<div class="property__info-finance-price">3 700 000
-							<span class="rouble">Р</span>
-						</div>
-					</div>
-				</div>
-				<div class="property__author">
-					<a href="http://www.idinaidi.ru/companies/21127-aktsent-nedvizhimost">
-						<div class="property__author-image is-company">
-							<img alt="Thumb ef2e4474fd64" src="http://assets.idinaidi.ru/system/company/logo/21127/thumb_ef2e4474fd64.gif?_=1438339174">
-						</div>
-					</a>
-				</div>
-			</div>
-			<!-- { block: 'property', mods: { type: 'development' }} -->
-			<div class="property property_type_development i-bem" data-bem='{"property": { "phone": "8 (916) 978-12-32", "id": 2 }}'>
-				<div class="property__photo">
-					<a class="property__photo-link" href="http://msk.idinaidi.ru/prodazha/podolsk/7588939" target="_blank">
-						<img alt="г. Подольск, Октябрьский пр-кт, д. 21а" src="http://assets.idinaidi.ru/system/listing_image/image/47523977/big_e7ae21d99943.jpg?_=1418986462">
-					</a>
-					<div class="property__photo-count">12</div>
-				</div>
-				<div class="property__location">
-					<div class="property__info-title">
-						<a href="http://msk.idinaidi.ru/prodazha/podolsk/7588939" target="_blank">
-							<strong>1-комнатная</strong> —
-							<strong>34</strong> м<sup>2</sup> —
-							<strong>5/10</strong> этаж</a>
-					</div>
-					<div class="property__info-address">Октябрьский пр-кт, д. 21а</div>
-				</div>
-				<div class="property__info">Продается однокомнатная квартира на 5 этаже 10-этажного дома в Подольке.&nbsp; Сан.узел раздельный, балкон застеклен, есть телефон. Новым...</div>
-				<div class="property__phone property__phone_hidden">Звоните: 8 (916) 978-**-**</div>
-				<div class="property__footer">
-					<div class="property__info-update">обновлено: 30 июля</div>
-					<div class="property__info-finance">
-						<div class="property__info-finance-price">3 700 000
-							<span class="rouble">Р</span>
-						</div>
-					</div>
-				</div>
-				<div class="property__author">
-					<a href="http://www.idinaidi.ru/companies/21127-aktsent-nedvizhimost">
-						<div class="property__author-image is-company">
-							<img alt="Thumb ef2e4474fd64" src="http://assets.idinaidi.ru/system/company/logo/21127/thumb_ef2e4474fd64.gif?_=1438339174">
-						</div>
-					</a>
-				</div>
-			</div>
+            <div class="property property_type_advert i-bem" data-bem='{"property": { "phone": "8 (916) 978-12-32", "id": 3}}'>
+                <div class="property__photo">
+                    <a class="property__photo-link" href="http://msk.idinaidi.ru/prodazha/podolsk/7588939" target="_blank">
+                        <img alt="г. Подольск, Октябрьский пр-кт, д. 21а" src="http://assets.idinaidi.ru/system/listing_image/image/47523977/big_e7ae21d99943.jpg?_=1418986462">
+                    </a>
+                    <div class="property__photo-count">12</div>
+                </div>
+                <div class="property__location">
+                    <div class="property__info-title">
+                        <a href="http://msk.idinaidi.ru/prodazha/podolsk/7588939" target="_blank">
+                            <strong>1-комнатная</strong> —
+                            <strong>34</strong> м<sup>2</sup> —
+                            <strong>5/10</strong> этаж</a>
+                    </div>
+                    <div class="property__info-address">Октябрьский пр-кт, д. 21а</div>
+                </div>
+                <div class="property__info">Продается однокомнатная квартира на 5 этаже 10-этажного дома в Подольке.&nbsp; Сан.узел раздельный, балкон застеклен, есть телефон. Новым...</div>
+                <div class="property__phone property__phone_hidden">Звоните: 8 (916) 978-**-**</div>
+                <div class="property__footer">
+                    <div class="property__info-update">обновлено: 30 июля</div>
+                    <div class="property__info-finance">
+                        <div class="property__info-finance-price">3 700 000
+                            <span class="rouble">Р</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="property__author">
+                    <a href="http://www.idinaidi.ru/companies/21127-aktsent-nedvizhimost">
+                        <div class="property__author-image is-company">
+                            <img alt="Thumb ef2e4474fd64" src="http://assets.idinaidi.ru/system/company/logo/21127/thumb_ef2e4474fd64.gif?_=1438339174">
+                        </div>
+                    </a>
+                </div>
 
-			<div class="property property_type_advert i-bem" data-bem='{"property": { "phone": "8 (916) 978-12-32", "id": 3}}'>
-				<div class="property__photo">
-					<a class="property__photo-link" href="http://msk.idinaidi.ru/prodazha/podolsk/7588939" target="_blank">
-						<img alt="г. Подольск, Октябрьский пр-кт, д. 21а" src="http://assets.idinaidi.ru/system/listing_image/image/47523977/big_e7ae21d99943.jpg?_=1418986462">
-					</a>
-					<div class="property__photo-count">12</div>
-				</div>
-				<div class="property__location">
-					<div class="property__info-title">
-						<a href="http://msk.idinaidi.ru/prodazha/podolsk/7588939" target="_blank">
-							<strong>1-комнатная</strong> —
-							<strong>34</strong> м<sup>2</sup> —
-							<strong>5/10</strong> этаж</a>
-					</div>
-					<div class="property__info-address">Октябрьский пр-кт, д. 21а</div>
-				</div>
-				<div class="property__info">Продается однокомнатная квартира на 5 этаже 10-этажного дома в Подольке.&nbsp; Сан.узел раздельный, балкон застеклен, есть телефон. Новым...</div>
-				<div class="property__phone property__phone_hidden">Звоните: 8 (916) 978-**-**</div>
-				<div class="property__footer">
-					<div class="property__info-update">обновлено: 30 июля</div>
-					<div class="property__info-finance">
-						<div class="property__info-finance-price">3 700 000
-							<span class="rouble">Р</span>
-						</div>
-					</div>
-				</div>
-				<div class="property__author">
-					<a href="http://www.idinaidi.ru/companies/21127-aktsent-nedvizhimost">
-						<div class="property__author-image is-company">
-							<img alt="Thumb ef2e4474fd64" src="http://assets.idinaidi.ru/system/company/logo/21127/thumb_ef2e4474fd64.gif?_=1438339174">
-						</div>
-					</a>
-				</div>
-			</div>
-
-		</div>
-
-	</main>
-
-	<script type="text/javascript" charset="utf-8" src="https://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
-	<script src="bem/bem-dist/desktop.bundles/index/index.js"></script>
-
+                <button class="button property__hide i-bem" data-bem='{"button": ""}'>
+                	Скрыть объявление из выдачи
+                </button>
+            </div>
+        </div>
+    </main>
+    <script type="text/javascript" charset="utf-8" src="https://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
+    <script src="bem/bem-dist/desktop.bundles/index/index.js"></script>
 </body>
 
 </html>

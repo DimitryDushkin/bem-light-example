@@ -29,14 +29,24 @@ provide(BEM.decl('property', {
 
         }
 
+    },
+
+    _onHideClick: function() {
+        this.setMod('hidden');
     }
 
 }, {
 
     live: function() {
+
         this.liveBindTo('phone', 'click', function(e) {
             this._onPhoneClick(e);
         });
+
+        this.liveInitOnBlockInsideEvent('clicked', 'button', function(e) {
+            this._onHideClick(e);
+        });
+
     }
 
 }));
