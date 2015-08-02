@@ -1,9 +1,13 @@
-modules.define(
-    'property',
-    ['i-bem__dom', 'i-ga'],
-    function(provide, BEM, GA) {
+// verbose module declaration:
+// modules.define(
+//     'property',
+//     ['i-bem__dom', 'i-ga'],
+//     function(provide, BEM, GA) {
 
-provide(BEM.decl(this.name, {
+// less verbose declaration:
+modules.define('i-bem__dom', function(provide, BEM) {
+
+provide(BEM.decl('property', {
 
     _onPhoneClick: function() {
 
@@ -14,7 +18,11 @@ provide(BEM.decl(this.name, {
             this.delMod(phoneElem, 'hidden');
             phoneElem.text('Звоните: ' + this.params.phone);
 
-            GA.hit(this.getMod('type'), this.params.id);
+            // using of static method of block with verbose declaration
+            //GA.hit(this.getMod('type'), this.params.id);
+
+            // less verbose option
+            BEM.blocks['i-ga'].hit(this.getMod('type'), this.params.id);
 
         }
 
