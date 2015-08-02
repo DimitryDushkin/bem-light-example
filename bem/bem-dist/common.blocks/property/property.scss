@@ -3,8 +3,13 @@
     clear: both;
     border-top: 1px solid #cecece;
     overflow: hidden;
-    padding: 20px 10px 0 0;
+    padding: 20px 0;
     font-size: 14px;
+
+    &:first-child
+    {
+        border: 0;
+    }
 
     &__photo {
         float: left;
@@ -272,5 +277,12 @@
         line-height: 24px;
         vertical-align: bottom;
         width: 440px;
+    }
+
+    &__phone {
+        display: inline-block;
+        cursor: pointer;
+        border: 1px solid #eee;
+        padding: 10px;
     }
 }

@@ -3,6 +3,7 @@
         { block: 'i-reset' },
         { block: 'container' },
         { block: 'main-menu' },
-        { block: 'property' }
+        { block: 'property' },
+        { elem: 'typography' }
     ]
 });
