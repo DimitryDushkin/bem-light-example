@@ -3,12 +3,22 @@
     clear: both;
     border-top: 1px solid #cecece;
     overflow: hidden;
-    padding: 20px 0;
+    padding: 20px;
     font-size: 14px;
 
     &:first-child
     {
         border: 0;
+    }
+
+    &_type {
+        &_advert {
+            background-color: #ececec;
+        }
+
+        &_development {
+            background-color: #fff1ed;
+        }
     }
 
     &__photo {
@@ -284,5 +294,9 @@
         cursor: pointer;
         border: 1px solid #eee;
         padding: 10px;
+
+        &_revealed {
+            cursor: text;
+        }
     }
 }

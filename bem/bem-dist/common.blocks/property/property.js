@@ -15,7 +15,10 @@ provide(BEM.decl('property', {
 
         if (this.hasMod(phoneElem, 'hidden')) {
 
-            this.delMod(phoneElem, 'hidden');
+            this
+                .delMod(phoneElem, 'hidden')
+                .setMod(phoneElem, 'revealed');
+
             phoneElem.text('Звоните: ' + this.params.phone);
 
             // using of static method of block with verbose declaration
