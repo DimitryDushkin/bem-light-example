@@ -12,9 +12,11 @@ BEMDOM.decl('property', {
     }
 
 }, {
+
     live: function() {
         this.liveInitOnEvent('click');
     }
+
 });
 
 provide(BEMDOM);

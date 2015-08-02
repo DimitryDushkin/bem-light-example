@@ -22,3 +22,8 @@ Based on [https://github.com/bem/generator-bem-stub](https://github.com/bem/gene
 
 Difference:
   * add SASS support.
+
+
+#### TODO
+
+ * Добавить browser-sync для авто-запуска enb make при изменении файлов scss, css, js в bem-dist/*.blocks и авто-обновлении страницы

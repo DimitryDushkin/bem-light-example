@@ -1,3 +1,3 @@
 exports.blocks = [
-    { name: 'custom-pack' }
+    { name: 'page' }
 ];
