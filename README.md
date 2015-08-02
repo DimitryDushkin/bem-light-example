@@ -1,15 +1,15 @@
 Example of using BEM stack (enb + bem-core) for multi-page sites.
 
-Main purpose of this example is showing that you can use basic BEM compiling technologies for sites without node.js. So you do not need to bother with templating via BEMHTML or BH.
+Main purpose of this example is to show that you can use basic BEM compiling technologies (enb) for sites without node.js. You do not need to bother with templating via BEMHTML or BH to get one of the best parts of BEM stack.
 
-I think it is ideal scheme for sites:
+I think that's ideal scheme for sites:
  * with own front-end components framework, which means no [bem-components](https://github.com/bem/bem-components) need,
  * own templating engine,
  * non-node.js back-end.
 
-Basically it's ideal for Ruby on Rails on Django sites and other back-end frameworks.
+Basically it's ideal for Ruby on Rails, Django or other back-end frameworks.
 
-Based on [https://github.com/bem/generator-bem-stub](https://github.com/bem/generator-bem-stub). Options chosen:
+Based on [https://github.com/bem/generator-bem-stub](https://github.com/bem/generator-bem-stub). Chosen options :
  * ENB,
  * bem-core,
  * without bem-components,
@@ -17,14 +17,14 @@ Based on [https://github.com/bem/generator-bem-stub](https://github.com/bem/gene
  * only pure CSS,
  * Autoprefixer is ON,
  * ie8, ie9, browser.js,
- * my templating engine,
- * no minimazing.
+ * "my templating engine",
+ * no minify.
 
 Difference:
   * add SASS support via `enb-sass`,
-  * add ability to declare dependecies also in *.js files in `modules.require` section via enb-modules `deps-with-modules`.
+  * add ability to declare dependecies also in `*.js` files in `modules.require` section via enb-modules `deps-with-modules`.
 
 
 #### TODO
 
- * Добавить browser-sync для авто-запуска enb make при изменении файлов scss, css, js в bem-dist/*.blocks и авто-обновлении страницы
+ * Add `browser-sync` for `enb make` auto-start on scss, css, js files change. Page auto-refresh.
