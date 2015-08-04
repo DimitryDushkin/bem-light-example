@@ -5,6 +5,7 @@
     overflow: hidden;
     padding: 20px;
     font-size: 14px;
+    width: 650px;
 
     &:first-child
     {
@@ -80,11 +81,11 @@
         font-size: 12px;
         overflow: hidden;
         color: #999999;
-        width: 370px;
+        width: 342px;
     }
 
     &__info-address {
-        width: 375px;
+        width: 342px;
         display: block;
         margin-top: 5px;
         margin-left: 200px;
@@ -132,39 +133,17 @@
     }
 
     &__info-finance {
-        float: right;
-        height: 24px;
+        display: inline-block;
         vertical-align: bottom;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 18px;
+        margin-left: 10px;
     }
 
     &__info-price {
         font-size: 22px;
         font-weight: bold;
-    }
-
-    &__info-finance-price {
-        font-weight: bold;
-        font-size: 18px;
-        line-height: 18px;
-        display: inline-block;
-        vertical-align: bottom;
-    }
-
-    &__info-finance-common {
-        font-size: 14px;
-        line-height: 14px;
-        display: inline-block;
-        vertical-align: bottom;
-        margin-left: 10px;
-    }
-
-    &__info-finance-common.is-no-prices {
-        margin-top: 0;
-        font-weight: normal;
-    }
-
-    &__info-finance-common.is-no-total {
-        margin-top: 0;
     }
 
     &__info-date-due {
@@ -179,21 +158,6 @@
         width: 100%;
         margin-left: 200px;
         margin-bottom: 10px;
-    }
-
-    &__info-metro {
-        margin-bottom: 15px;
-        margin-top: 3px;
-        height: 18px;
-        line-height: 18px;
-        color: black;
-        font-size: 14px;
-    }
-
-    &__info-metro .icon--walkman {
-        margin-right: 3px;
-        position: relative;
-        top: 1px;
     }
 
     &__location {
@@ -211,7 +175,7 @@
     &__author {
         position: absolute;
         top: 19px;
-        right: 0;
+        right: 20px;
     }
 
     &__author a {
@@ -274,9 +238,13 @@
         display: none;
     }
 
-    &__info-title a {
-        text-decoration: none;
-        font-size: 16px;
+    &__info-title {
+        width: 562px;
+
+        a {
+            text-decoration: none;
+            font-size: 16px;
+        }
     }
 
     &__info-update {
@@ -288,21 +256,25 @@
     }
 
     &__footer {
-        height: 24px;
-        line-height: 24px;
+        height: 35px;
+        line-height: 35px;
         vertical-align: bottom;
-        width: 440px;
+        margin-top: 20px;
+        padding-left: 220px;
     }
 
     &__phone {
         display: inline-block;
         cursor: pointer;
-        border: 1px solid #999;
-        padding: 10px;
-        margin-top: 10px;
-        font-size: 16px;
+        border: 1px solid #ff5e24;
+        padding: 6px;
+        margin-top: 11px;
+        font-size: 14px;
+        color: #ff5e24;
 
         &_revealed {
+            border: 0;
+            padding-left: 0;
             cursor: text;
         }
     }

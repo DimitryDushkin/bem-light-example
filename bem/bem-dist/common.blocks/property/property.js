@@ -16,7 +16,7 @@ provide(BEM.decl('property', {
                 .delMod(phoneElem, 'hidden')
                 .setMod(phoneElem, 'revealed');
 
-            phoneElem.text('Звоните: ' + this.params.phone);
+            phoneElem.text(this.params.phone);
 
             GA.hit(this.getMod('type'), this.params.id);
 
