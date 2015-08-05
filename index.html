@@ -16,9 +16,10 @@
         <h1>Real estate</h1>
     </header>
 
-    <main class="page-layout__content">
+    <main class="page-layout__content properties-list i-bem" data-bem='{"properties-list": ""}'>
         <aside class="main-menu">
-            <select class="property-type i-bem" data-bem='{"property-type": ""}'>
+            <select class="property-type i-bem" data-bem='{"property-type": ""}' multiple="multiple">
+                <option></option>
                 <option value="apartment">Квартира</option>
                 <option value="room">Комната</option>
                 <option value="house">Дом</option>
@@ -27,7 +28,7 @@
         </aside>
         <div class="content">
 
-            <div class="property property_type_advert i-bem" data-bem='{"property": { "phone": "8 (916) 978-12-32", "id": 1 }}'>
+            <div class="property property_type_advert i-bem" data-bem='{"property": { "phone": "8 (916) 978-12-32", "id": 1, "type": "apartment" }}'>
                 <div class="property__photo">
                     <a class="property__photo-link" href="http://msk.idinaidi.ru/prodazha/podolsk/7588939" target="_blank">
                         <img alt="г. Подольск, Октябрьский пр-кт, д. 21а" src="http://assets.idinaidi.ru/system/listing_image/image/47523977/big_e7ae21d99943.jpg?_=1418986462">
@@ -64,7 +65,7 @@
             </div>
 
             <!-- { block: 'property', mods: { type: 'development' }} -->
-            <div class="property property_type_development i-bem" data-bem='{"property": { "phone": "8 (916) 981-12-32", "id": 2 }}'>
+            <div class="property property_type_development i-bem" data-bem='{"property": { "phone": "8 (916) 981-12-32", "id": 2, "type": "house" }}'>
                 <div class="property__photo">
                     <a class="property__photo-link" href="http://msk.idinaidi.ru/prodazha/moskva/11051358" target="_blank"><img alt="г. Москва, Северодвинская ул., д. 11, корп. 1" src="http://assets.idinaidi.ru/system/listing_image/image/76965832/big_9c851393107e.jpg?_=1433767018"></a>
                     <div class="property__photo-count">21</div>
@@ -91,7 +92,7 @@
                 </div>
             </div>
 
-            <div class="property property_type_advert i-bem" data-bem='{"property": { "phone": "8 (916) 978-12-32", "id": 3}}'>
+            <div class="property property_type_advert i-bem" data-bem='{"property": { "phone": "8 (916) 978-12-32", "id": 3, "type": "room" }}'>
                 <div class="property__photo">
                     <a class="property__photo-link" href="http://msk.idinaidi.ru/prodazha/podolsk/7588939" target="_blank">
                         <img alt="г. Подольск, Октябрьский пр-кт, д. 21а" src="http://assets.idinaidi.ru/system/listing_image/image/47523977/big_e7ae21d99943.jpg?_=1418986462">

@@ -8,8 +8,18 @@ provide(BEM.decl('property-type', {
 
     onSetMod: {
         js: function() {
-            this.domElem.select2({ tags: true, multiple: true, width: "260px" });
+            this.domElem.select2({
+                // tags: true,
+                multiple: true,
+                width: "260px",
+                placeholder: "Выберите тип недвижимости"
+            });
+            this.bindTo('change', this._onChange);
         }
+    },
+
+    _onChange: function(e) {
+        this.emit("propertyTypeChanged", $(e.target).val());
     }
 
 }));
