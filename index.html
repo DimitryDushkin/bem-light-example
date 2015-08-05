@@ -7,6 +7,7 @@
     <title>Simple BEM example</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bem/bem-dist/desktop.bundles/index/index.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
 </head>
 
 <body class="page-layout">
@@ -17,7 +18,12 @@
 
     <main class="page-layout__content">
         <aside class="main-menu">
-            filters
+            <select class="property-type i-bem" data-bem='{"property-type": ""}'>
+                <option value="apartment">Квартира</option>
+                <option value="room">Комната</option>
+                <option value="house">Дом</option>
+                <option value="plot">Участок</option>
+            </select>
         </aside>
         <div class="content">
 
@@ -124,6 +130,7 @@
     </main>
 
     <script type="text/javascript" charset="utf-8" src="https://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="bem/bem-dist/desktop.bundles/index/index.js"></script>
 
 </body>
