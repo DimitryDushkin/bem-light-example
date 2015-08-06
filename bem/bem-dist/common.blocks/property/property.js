@@ -26,6 +26,10 @@ provide(BEM.decl('property', {
 
     _onHideClick: function() {
         this.setMod('hidden');
+    },
+
+    getType: function() {
+        return this.params.type;
     }
 
 }, {
