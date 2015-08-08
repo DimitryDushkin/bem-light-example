@@ -1,13 +1,13 @@
-// verbose module declaration:
 modules.define(
-    'property-type',
+    'property-sort',
     ['i-bem__dom', 'selectize'],
     function(provide, BEM, selectize) {
 
-provide(BEM.decl('property-type', {
+provide(BEM.decl('property-sort', {
 
     onSetMod: {
         js: function() {
+
             this.domElem.selectize({
                 delimiter: ',',
                 persist: false,
@@ -18,12 +18,13 @@ provide(BEM.decl('property-type', {
                     }
                 }
             });
+
             this.bindTo('change', this._onChange);
         }
     },
 
     _onChange: function(e) {
-        this.emit("propertyTypeChanged", $(e.target).val());
+        this.emit("propertySortChanged", $(e.target).val());
     }
 
 }));

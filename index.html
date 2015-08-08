@@ -8,23 +8,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bem/bem-dist/desktop.bundles/index/index.css">
     <link href="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/css/select2.min.css" rel="stylesheet" />
+    <!-- insert selectize styles from https://github.com/brianreavis/selectize.js/blob/master/dist/css/selectize.css -->
 </head>
 
 <body class="page-layout">
 
     <header>
-        <h1>Real estate</h1>
+        <h1 class="page-layout__header">Продажа квартир в Москве и Московской области</h1>
     </header>
 
     <main class="page-layout__content properties-list i-bem" data-bem='{"properties-list": ""}'>
         <aside class="main-menu">
-            <select class="property-type i-bem" data-bem='{"property-type": ""}' multiple="multiple">
-                <option></option>
-                <option value="apartment">Квартира</option>
-                <option value="room">Комната</option>
-                <option value="house">Дом</option>
-                <option value="plot">Участок</option>
-            </select>
+            <div class="advert-search-form properties-search i-bem" data-bem='{"properties-search": ""}'>
+                <div class="advert-search-form__row">
+                    <select class="property-type i-bem" data-bem='{"property-type": ""}' multiple="multiple">
+                        <option></option>
+                        <option value="apartment">Квартира</option>
+                        <option value="room">Комната</option>
+                        <option value="house">Дом</option>
+                        <option value="plot">Участок</option>
+                    </select>
+                </div>
+                <div class="advert-search-form__row">
+                    <select class="property-sort i-bem" data-bem='{"property-sort": ""}'>
+                        <option></option>
+                        <option value="price_desc">Цена (убыв.)</option>
+                        <option value="price_asc">Цена (возр.)</option>
+                    </select>
+                </div>
+            </div>
         </aside>
         <div class="content">
 
@@ -132,8 +144,10 @@
 
     <script type="text/javascript" charset="utf-8" src="https://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/select2/4.0.0/js/select2.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/tinysort/2.2.2/tinysort.min.js"></script>
+    <!-- add script for selectize - https://github.com/brianreavis/selectize.js/blob/master/dist/js/standalone/selectize.js don't use minified script!
+    see https://github.com/brianreavis/selectize.js/issues/219 -->
     <script type="text/javascript" charset="utf-8" src="bem/bem-dist/desktop.bundles/index/index.js"></script>
-
 </body>
 
 </html>
