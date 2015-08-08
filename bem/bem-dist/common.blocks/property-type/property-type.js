@@ -1,8 +1,8 @@
 // verbose module declaration:
 modules.define(
     'property-type',
-    ['i-bem__dom', 'selectize'],
-    function(provide, BEM, selectize) {
+    ['i-bem__dom'],
+    function(provide, BEM) {
 
 provide(BEM.decl('property-type', {
 

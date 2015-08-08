@@ -1,3 +1,1 @@
-modules.define( 'selectize', ['jquery'], function(provide, $) {
-  provide(Selectize);
-});
+../../libs/selectize/dist/js/standalone/selectize.js

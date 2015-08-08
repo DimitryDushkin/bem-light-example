@@ -1,7 +1,7 @@
 modules.define(
     'property-sort',
-    ['i-bem__dom', 'selectize'],
-    function(provide, BEM, selectize) {
+    ['i-bem__dom'],
+    function(provide, BEM) {
 
 provide(BEM.decl('property-sort', {
 
