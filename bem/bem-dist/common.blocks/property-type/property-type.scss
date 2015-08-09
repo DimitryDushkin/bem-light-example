@@ -1,0 +1,8 @@
+.property-type {
+    opacity: 0;
+    transition: opacity 0.2s;
+    
+    &_js_inited {
+        opacity: 1;
+    }
+}

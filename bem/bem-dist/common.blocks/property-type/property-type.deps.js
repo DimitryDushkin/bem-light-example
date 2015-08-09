@@ -1,5 +1,5 @@
 ({
     shouldDeps: [
-        { block: 'select2' }
+        { block: 'selectize' }
     ]
 });

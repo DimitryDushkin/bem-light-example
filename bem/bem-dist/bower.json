@@ -9,6 +9,7 @@
     "libs"
   ],
   "dependencies": {
-    "bem-core": "v2.7.0"
+    "bem-core": "v2.7.0",
+    "selectize": "~0.12.1"
   }
 }
