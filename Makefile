@@ -1,4 +1,4 @@
-BEM_DIST = bem/bem-dist
+BEM_DIST = bem
 ENB = $(BEM_DIST)/node_modules/.bin/enb
 
 all: build
@@ -9,7 +9,7 @@ build: install
 install: $(BEM_DIST)/node_modules
 
 $(BEM_DIST)/node_modules:
-	@cd $(BEM_DIST); npm install --silent &> /dev/null
+	@cd $(BEM_DIST); npm install
 	@echo "ok"
 
 .PHONY: build install
