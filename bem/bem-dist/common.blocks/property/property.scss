@@ -39,33 +39,6 @@
         margin-bottom: 20px;
     }
 
-    &__photo.no-photo {
-        background: url(http://www.idinaidi.ru/assets/default/property_photo_big-91d71931fa152a9ea1eac19ae6f28c02.png) no-repeat center;
-    }
-
-    &__photo-count {
-        left: 0;
-        min-width: 15px;
-        bottom: 0;
-        padding: 0 5px 0 30px;
-        line-height: 28px;
-        background-color: #ff5e24;
-        font-size: 14px;
-        color: white;
-        position: relative;
-        position: absolute;
-    }
-
-    &__photo-count:after {
-        content: "";
-        width: 19px;
-        height: 15px;
-        background: url(http://www.idinaidi.ru/assets/icons-s8376332de3-fc746e7f2455d3ae093188acabb48977.png) 0 -2896px no-repeat;
-        position: absolute;
-        left: 7px;
-        top: 6px;
-    }
-
     &__photo-link {
         height: 133px;
         display: inline-block;
