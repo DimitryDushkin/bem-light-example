@@ -25,6 +25,21 @@ Difference:
   * add ability to declare dependecies also in `*.js` files in `modules.require` section via enb-modules `deps-with-modules`.
 
 
+#### How to start
+```
+make
+open index.html
+```
+
+### How to recompile static files
+```
+make
+# OR
+cd bem
+enb make
+```
+
+
 #### TODO
 
  * Add `browser-sync` for `enb make` auto-start on scss, css, js files change. Page auto-refresh.
