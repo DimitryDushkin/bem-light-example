@@ -98,11 +98,11 @@ provide(BEM.decl('properties-search', {
     },
 
     _isNoProperties: function() {
-        return this.params.propertyTypes.length == 0;
+        return this.params.propertyTypes && this.params.propertyTypes.length == 0;
     },
 
     _isProperties: function() {
-        return this.params.propertyTypes.length > 1;
+        return this.params.propertyTypes && this.params.propertyTypes.length > 1;
     },
 
     _isHouse: function() {
@@ -122,7 +122,7 @@ provide(BEM.decl('properties-search', {
     },
 
     _isOneProperty: function() {
-        return (this.params.propertyTypes.length == 1);
+        return this.params.propertyTypes && this.params.propertyTypes.length == 1;
     },
 
 }));
