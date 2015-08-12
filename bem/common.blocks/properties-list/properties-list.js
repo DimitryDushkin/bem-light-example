@@ -50,8 +50,8 @@ provide(BEM.decl('properties-list', {
 
     _onPropertySortChanged: function(e, sortParam) {
         var sortDetails = sortParam.split("_");
-        sortParamName = sortDetails[0];
-        sortOrder = sortDetails[1];
+        var sortParamName = sortDetails[0];
+        var sortOrder = sortDetails[1];
         tinysort('.property', { data: sortParamName, order: sortOrder });
     }
 
