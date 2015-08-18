@@ -38,7 +38,7 @@
         </aside>
         <div class="content">
 
-            <div class="property property_type_advert i-bem" data-bem='{"property": { "phone": "8 (916) 978-12-32", "id": 1, "type": "apartment", "price": 20000 }}'>
+            <div class="property property_type_advert i-bem" data-bem='{"property": { "phone": "8 (916) 978-12-32", "id": 1, "type": "apartment" }}' data-price=3700000 data-area=38>
                 <div class="property__photo">
                     <a class="property__photo-link" href="https://yandex.ru/images/search?text=hobbit%20shire" target="_blank">
                         <img src="images/property_image_1.jpg" />
@@ -53,7 +53,7 @@
                     </div>
                     <div class="property__info-address">Дальние Увалы, нора № 39</div>
                 </div>
-                <div class="property__info">Продается однокомнатная квартира на 5 этаже 10-этажного дома в Подольке.&nbsp; Сан.узел раздельный, балкон застеклен, есть телефон. Новым...</div>
+                <div class="property__info">Продается замечательная нора в Дальних Увалах. Площадь 38&nbsp;м<sup>2</sup>. Сан.узел раздельный, балкон застеклен, есть телефон. Новым...</div>
                 <div class="property__phone property__phone_hidden">8 (916) 978-**-**</div>
                 <div class="property__footer">
                     <div class="property__info-update">обновлено: 30 июля</div>
@@ -74,7 +74,7 @@
             </div>
 
             <!-- { block: 'property', mods: { type: 'development' }} -->
-            <div class="property property_type_development i-bem" data-bem='{"property": { "phone": "8 (916) 981-12-32", "id": 2, "type": "house" }}'>
+            <div class="property property_type_development i-bem" data-bem='{"property": { "phone": "8 (916) 981-12-32", "id": 2, "type": "house" }}' data-price=9999999 data-area=50 data-plot-area=100>
                 <div class="property__photo">
                     <a class="property__photo-link" href="https://yandex.ru/images/search?text=hobbit%20shire" target="_blank"><img src="images/property_image_2.jpeg"></a>
                 </div>
@@ -82,7 +82,7 @@
                     <div class="property__info-title"><a href="https://yandex.ru/images/search?text=hobbit%20shire" target="_blank">Дом у озера в Тукленде</a></div>
                     <div class="property__info-address">Тукленд, Тукборо, ближайший к озеру дом</div>
                 </div>
-                <div class="property__info">ID1826. Продается аккуратная 2-комн. квартира в прекрасном зеленом районе на берегу реки Яузы, с видами на парк и набережную реки. В доме только...</div>
+                <div class="property__info">ID1826. Продается аккуратный 2-комн. дом площадью 50 м <sup>2</sup>, участок 100&nbsp;м<sup>2</sup>.</div>
                 <div class="property__phone property__phone_hidden">8 (916) 981-**-**</div>
                 <div class="property__footer">
                     <div class="property__info-update">обновлено: 29 июля</div>
@@ -100,7 +100,7 @@
                 </div>
             </div>
 
-            <div class="property property_type_advert i-bem" data-bem='{"property": { "phone": "8 (916) 978-12-32", "id": 3, "type": "room" }}'>
+            <div class="property property_type_advert i-bem" data-bem='{"property": { "phone": "8 (916) 978-12-32", "id": 3, "type": "room" }}' data-price=4200000 data-area=10>
                 <div class="property__photo">
                     <a class="property__photo-link" href="https://yandex.ru/images/search?text=hobbit%20shire" target="_blank">
                         <img src="images/property_image_3.jpg" />
@@ -114,7 +114,7 @@
                     </div>
                     <div class="property__info-address">Брейндиванский мост</div>
                 </div>
-                <div class="property__info">Продается чудесная нора под живописным мостом. Сан.узел раздельный, балкон застеклен, есть телефон. Новым...</div>
+                <div class="property__info">Продается комната под живописным мостом. Площадь 10&nbsp;м<sup>2</sup>. За квартирой закреплен старый, но работящий эльф.</div>
                 <div class="property__phone property__phone_hidden">8 (916) 978-**-**</div>
                 <div class="property__footer">
                     <div class="property__info-update">обновлено: 30 июля</div>
@@ -137,6 +137,8 @@
     </main>
 
     <script type="text/javascript" charset="utf-8" src="http://yastatic.net/jquery/2.1.4/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/tinysort/2.2.2/tinysort.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.min.js"></script>
     <script type="text/javascript" charset="utf-8" src="bem/desktop.bundles/index/index.js"></script>
 </body>
 

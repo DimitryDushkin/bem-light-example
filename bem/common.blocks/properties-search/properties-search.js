@@ -17,14 +17,15 @@ provide(BEM.decl('properties-search', {
     },
 
     _getOptionsList: function() {
-        if (this._isNoProperties() || this._isProperties()) {
-            return this._priceOptions();
-        } else if (this._isHouse()) {
-            return this._houseOptions();
-        } else if (this._isPlot()) {
-            return this._plotOptions();
-        } else if (this._isApartmentOrRoom()) {
-            return this._apartmentRoomOptions();
+        if (this._isNoProperties()) {
+            return this._getOptions(["price_asc", "price_desc"]);
+        } else {
+            var sortKeys = _.filter(this._sortKeys(), this._filterSortKey.bind(this));
+            if (sortKeys.length >= 1) {
+                return this._getOptions(sortKeys);
+            } else {
+                return [];
+            }
         }
     },
 
@@ -44,86 +45,68 @@ provide(BEM.decl('properties-search', {
         });
     },
 
-    ////////////////////////////////////////////////////////////////////////////////////
-
-    _priceOptions: function() {
-        return [
-            {
-                text: 'Цена (убыв.)',
-                value: "price_desc"
-            },
-            {
-                text: 'Цена (возр.)',
-                value: "price_asc"
-            }
-        ];
-    },
-
-    _houseOptions: function() {
-        return this._apartmentRoomOptions().concat(this._plotAreaOptions());
-    },
-
-    _plotOptions: function() {
-        return this._plotAreaOptions().concat(this._priceOptions());
-    },
-
-    _apartmentRoomOptions: function() {
-        return this._areaOptions().concat(this._priceOptions());
-    },
-
-    _areaOptions: function() {
-        return [
-            {
-                text: 'Площадь (убыв.)',
-                value: "area_desc"
-            },
-            {
-                text: 'Площадь (возр.)',
-                value: "area_asc"
-            }
-        ];
-    },
-
-    _plotAreaOptions: function() {
-        return [
-            {
-                text: 'Площадь участка (убыв.)',
-                value: "plot_area_desc"
-            },
-            {
-                text: 'Площадь участка (возр.)',
-                value: "plot_area_asc"
-            }
-        ];
-    },
-
     _isNoProperties: function() {
         return this.params.propertyTypes && this.params.propertyTypes.length == 0;
     },
 
-    _isProperties: function() {
-        return this.params.propertyTypes && this.params.propertyTypes.length > 1;
+    _filterSortKey: function(key) {
+        var mappings = {
+            "price_desc": ["apartment", "room", "house", "plot"],
+            "price_asc": ["apartment", "room", "house", "plot"],
+            "area_desc": ["apartment", "room", "house"],
+            "area_asc": ["apartment", "room", "house"],
+            "plot_area_desc": ["house", "plot"],
+            "plot_area_asc": ["house", "plot"]
+        };
+        if (_.intersection(mappings[key], this.params.propertyTypes).length >= this.params.propertyTypes.length) {
+            return true;
+        } else {
+            return false;
+        }
     },
 
-    _isHouse: function() {
-        return this._isSpecificProperty("house");
+    _sortKeys: function() {
+        return ["price_desc", "price_asc", "area_desc", "area_asc", "plot_area_desc", "plot_area_asc"];
     },
 
-    _isPlot: function() {
-        return this._isSpecificProperty("plot");
+    _getOptions: function(keys) {
+        var optionsDescriptions = this._optionsDescriptions();
+        var result = [];
+        for (var i = 0; i <= keys.length; i++) {
+            var key = keys[i];
+            result.push(optionsDescriptions[key]);
+        }
+        return result;
     },
 
-    _isApartmentOrRoom: function() {
-        return (this._isSpecificProperty("apartment") || this._isSpecificProperty("room"));
-    },
-
-    _isSpecificProperty: function(type) {
-        return (this._isOneProperty() && this.params.propertyTypes[0] == type);
-    },
-
-    _isOneProperty: function() {
-        return this.params.propertyTypes && this.params.propertyTypes.length == 1;
-    },
+    _optionsDescriptions: function() {
+        return {
+            "price_desc": {
+                text: "Цена (убыв.)",
+                value: "price_desc"
+            },
+            "price_asc": {
+                text: "Цена (возр.)",
+                value: "price_asc"
+            },
+            "area_desc": {
+                text: "Площадь (убыв.)",
+                value: "area_desc"
+            },
+            "area_asc": {
+                text: "Площадь (возр.)",
+                value: "area_asc"
+            },
+            "plot_area_desc": {
+                text: "Площадь участка (убыв.)",
+                value: "plot_area_desc"
+            },
+            "plot_area_asc": {
+                text: "Площадь участка (возр.)",
+                value: "plot_area_asc"
+            }
+        };
+    }
 
 }));
 
