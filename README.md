@@ -28,7 +28,7 @@ Difference:
 #### How to start
 ```
 make
-open index.html
+open src/index.html
 ```
 
 ### How to recompile static files

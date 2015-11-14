@@ -1,0 +1,25 @@
+{
+  "name": "bem-dist",
+  "description": "BEM project",
+  "version": "0.0.0",
+  "repository": {},
+  "author": {
+    "name": "Dmitry Dushkin",
+    "email": "dndushkin@yandex-team.ru"
+  },
+  "devDependencies": {
+    "bower": "1.6.5",
+    "enb": "^1.1.0",
+    "enb-bem-techs": "2.1.0",
+    "enb-js": "^1.1.0",
+    "enb-stylus": "^2.2.0"
+  },
+  "scripts": {
+    "postinstall": "npm run deps",
+    "deps": "bower install --non-interactive",
+    "start": "enb server"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
