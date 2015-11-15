@@ -1,10 +1,11 @@
-var enbBemTechs = require('enb-bem-techs');
+var enbBemTechs = require('enb-bem-techs'),
+    isProduction = process.env.YENV === 'production';
 
 module.exports = function (config) {
     config.nodes('*.bundles/*', function (nodeConfig) {
         nodeConfig.addTechs([
 
-            // Where get blocks from
+            // Where to get blocks from
             [enbBemTechs.levels, {
                 levels: [
                     { path: 'libs/bem-core/common.blocks', check: false },
@@ -17,7 +18,7 @@ module.exports = function (config) {
             // set is as base file to compile bundle
             [require('enb/techs/file-provider'), { target: '?.bemdecl.js' }],
 
-            // index.bemdecl.js -> index.deps.js + block's deps
+            // index.bemdecl.js + blocks's deps-> index.deps.js
             [enbBemTechs.deps],
 
             // index.deps.js -> index.files.js
@@ -26,25 +27,49 @@ module.exports = function (config) {
             // index.js
             [require('enb-js/techs/browser-js'), {
                 target: '?.js',
-                includeYM: true
+                includeYM: true,
+                compress: isProduction
             }],
 
-            // Stylus for index.css
+            // Stylus + autoprefixer for index.css
             [require('enb-stylus/techs/stylus'), {
                 target: '?.css',
-                autoprefixer: { browsers: ['last 2 versions'] }
+                autoprefixer: { browsers: ['last 2 versions'] },
+                compress: isProduction
             }],
 
+        ]);
+
+        nodeConfig.mode('development', function(nodeConfig) {
+
             // Copy files from src/desktop.bundles/index to dist/js(css)
-            [ require('enb/techs/file-copy'), { sourceTarget: '?.js', destTarget: '../../../dist/js/?.js' } ],
-            [ require('enb/techs/file-copy'), { sourceTarget: '?.css', destTarget: '../../../dist/css/?.css' } ]
+            nodeConfig.addTechs([
+                [ require('enb/techs/file-copy'), { sourceTarget: '?.js', destTarget: '../../../dist/js/?.js' } ],
+                [ require('enb/techs/file-copy'), { sourceTarget: '?.css', destTarget: '../../../dist/css/?.css' } ]
+            ]);
 
-        ]);
+            nodeConfig.addTargets([
+                '../../../dist/js/?.js',
+                '../../../dist/css/?.css'
+            ]);
 
-        nodeConfig.addTargets([
-            '../../../dist/css/?.css',
-            '../../../dist/js/?.js'
-        ]);
+        });
+
+        nodeConfig.mode('production', function(nodeConfig) {
+
+            // Copy files from src/desktop.bundles/index to dist/js(css)
+            nodeConfig.addTechs([
+                [ require('enb/techs/file-copy'), { sourceTarget: '?.js', destTarget: '../../../dist/js/?.min.js' } ],
+                [ require('enb/techs/file-copy'), { sourceTarget: '?.css', destTarget: '../../../dist/css/?.min.css' } ]
+            ]);
+
+            nodeConfig.addTargets([
+                '../../../dist/js/?.min.js',
+                '../../../dist/css/?.min.css'
+            ]);
+
+        });
+
     });
 
 };
