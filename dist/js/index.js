@@ -7608,7 +7608,8 @@ provide(BEM.decl('properties-search', {
             "plot_area_desc": ["house", "plot"],
             "plot_area_asc": ["house", "plot"]
         };
-        if (_.intersection(mappings[key], this.params.propertyTypes).length >= this.params.propertyTypes.length) {
+        if (this.params.propertyTypes
+            && _.intersection(mappings[key], this.params.propertyTypes).length >= this.params.propertyTypes.length) {
             return true;
         } else {
             return false;
