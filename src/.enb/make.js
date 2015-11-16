@@ -1,5 +1,13 @@
 var enbBemTechs = require('enb-bem-techs'),
-    isProduction = process.env.YENV === 'production';
+    isProduction = process.env.YENV === 'production',
+    dist = {
+        js: isProduction
+                ? '../../../dist/js/?.min.js'
+                : '../../../dist/js/?.js',
+        css: isProduction
+                ? '../../../dist/css/?.min.css'
+                : '../../../dist/css/?.css'
+    };
 
 module.exports = function (config) {
     config.nodes('*.bundles/*', function (nodeConfig) {
@@ -38,37 +46,22 @@ module.exports = function (config) {
                 compress: isProduction
             }],
 
+            // Copy files from src/desktop.bundles/index to dist/js(css)
+            [require('enb/techs/file-copy'), {
+                sourceTarget: '?.js',
+                destTarget: dist.js
+            }],
+            [require('enb/techs/file-copy'), {
+                sourceTarget: '?.css',
+                destTarget: dist.css
+            }]
+
         ]);
 
-        nodeConfig.mode('development', function(nodeConfig) {
-
-            // Copy files from src/desktop.bundles/index to dist/js(css)
-            nodeConfig.addTechs([
-                [ require('enb/techs/file-copy'), { sourceTarget: '?.js', destTarget: '../../../dist/js/?.js' } ],
-                [ require('enb/techs/file-copy'), { sourceTarget: '?.css', destTarget: '../../../dist/css/?.css' } ]
-            ]);
-
-            nodeConfig.addTargets([
-                '../../../dist/js/?.js',
-                '../../../dist/css/?.css'
-            ]);
-
-        });
-
-        nodeConfig.mode('production', function(nodeConfig) {
-
-            // Copy files from src/desktop.bundles/index to dist/js(css)
-            nodeConfig.addTechs([
-                [ require('enb/techs/file-copy'), { sourceTarget: '?.js', destTarget: '../../../dist/js/?.min.js' } ],
-                [ require('enb/techs/file-copy'), { sourceTarget: '?.css', destTarget: '../../../dist/css/?.min.css' } ]
-            ]);
-
-            nodeConfig.addTargets([
-                '../../../dist/js/?.min.js',
-                '../../../dist/css/?.min.css'
-            ]);
-
-        });
+        nodeConfig.addTargets([
+            dist.js,
+            dist.css
+        ]);
 
     });
 
