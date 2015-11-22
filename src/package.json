@@ -18,7 +18,7 @@
   "scripts": {
     "postinstall": "npm run deps",
     "deps": "bower install --non-interactive",
-    "start": "enb server"
+    "start": "gulp"
   },
   "engines": {
     "node": ">=0.10.0"
