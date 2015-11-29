@@ -8,7 +8,7 @@
     "email": "dndushkin@yandex-team.ru"
   },
   "devDependencies": {
-    "bower": "1.6.5",
+    "bower": "1.6.8",
     "enb": "^1.1.0",
     "enb-bem-techs": "2.1.0",
     "enb-js": "^1.1.0",
