@@ -10,17 +10,29 @@ I think that's ideal scheme for sites:
 Basically it's ideal for Ruby on Rails, Django or other back-end frameworks.
 
 
-#### How to start
+### How to start
+Just:
 ```
 open dist/index.html
 ```
 
-### How to develop (recompile static files)
+How to develop (recompile static files):
 ```
 cd src
 npm install
 npm install -g browser-sync
 npm start
 ```
-
 Thanks to browser-sync browser will be auto-reloaded on src's files change.
+
+To recompile manually:
+```
+cd src
+enb make
+```
+
+to minify:
+```
+cd src
+YENV='production' enb make
+```
