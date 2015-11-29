@@ -8,11 +8,6 @@ provide(BEM.decl('properties-search', {
     onSetMod: {
         js: function() {
             this.params.propertyTypes = [];
-
-            this.findBlockInside('property-type').on(
-                'propertyTypeChanged',
-                this._onPropertyTypeChanged,
-                this);
         }
     },
 
@@ -31,18 +26,6 @@ provide(BEM.decl('properties-search', {
 
     _onChange: function(e) {
         this.emit("propertySortChanged", $(e.target).val());
-    },
-
-    _onPropertyTypeChanged: function(e, propertyTypes) {
-        this.params.propertyTypes = propertyTypes;
-        var selectize = this.findBlockInside('property-sort').domElem[0].selectize;
-        var optionsList = this._getOptionsList();
-
-        selectize.clear();
-        selectize.clearOptions();
-        selectize.load(function(callback) {
-            callback(optionsList);
-        });
     },
 
     _isNoProperties: function() {

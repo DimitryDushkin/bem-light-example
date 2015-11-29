@@ -2,12 +2,9 @@ var gulp = require('gulp'),
     terminal = require('child_process'),
     browserSync = require('browser-sync').create();
 
-
 gulp.task('browser-sync', function() {
     browserSync.init({
-        server: {
-            baseDir: "../dist"
-        }
+        server: { baseDir: "../dist" }
     });
 });
 

@@ -11,11 +11,6 @@ provide(BEM.decl('properties-list', {
                 'propertyTypeChanged',
                 this._onPropertyTypeChanged,
                 this);
-
-            this.findBlockInside('property-sort').on(
-                'propertySortChanged',
-                this._onPropertySortChanged,
-                this);
         }
     },
 
@@ -46,13 +41,6 @@ provide(BEM.decl('properties-list', {
 
         });
 
-    },
-
-    _onPropertySortChanged: function(e, sortParam) {
-        var sortDetails = sortParam.split("_");
-        var sortParamName = sortDetails[0];
-        var sortOrder = sortDetails[1];
-        tinysort('.property', { data: sortParamName, order: sortOrder });
     }
 
 }));
