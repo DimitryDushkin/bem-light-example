@@ -87,13 +87,7 @@ exports.deps = [
         "block": "selectize"
     },
     {
-        "block": "select2"
-    },
-    {
         "block": "properties-search"
-    },
-    {
-        "block": "property-sort"
     },
     {
         "block": "property"
@@ -103,6 +97,9 @@ exports.deps = [
     },
     {
         "block": "button"
+    },
+    {
+        "block": "property-sort"
     },
     {
         "block": "page"

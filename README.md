@@ -28,7 +28,7 @@ Thanks to browser-sync browser will be auto-reloaded on src's files change.
 To recompile manually:
 ```
 cd src
-enb make
+node_modules/.bin/enb make
 ```
 
 to minify:
