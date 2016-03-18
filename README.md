@@ -21,6 +21,7 @@ How to develop (recompile static files):
 cd src
 npm install
 npm install -g browser-sync
+npm link browser-sync
 npm start
 ```
 Thanks to browser-sync browser will be auto-reloaded on src's files change.
