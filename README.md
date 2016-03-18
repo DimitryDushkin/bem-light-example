@@ -35,5 +35,5 @@ node_modules/.bin/enb make
 to minify:
 ```
 cd src
-YENV='production' enb make
+YENV='production' node_modules/.bin/enb make
 ```
